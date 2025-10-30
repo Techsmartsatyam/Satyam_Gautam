@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillDossier.io</title>
+   <link rel="shortcut icon" href="port.png" type="image/x-icon">
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: black;
+      scroll-behavior: smooth;
+    }
+
+    /* ---------------- NAVBAR ---------------- */
+    .navbar {
+      backdrop-filter: blur(12px);
+      background: rgba(17, 24, 39, 0.9) !important;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #fff !important;
+    }
+    #div2 a{
+    position:relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+
+
+}
+#div2 a:hover{
+
+    background-color: #0ef;
+    color: black;
+    box-shadow: 0 0 80px #0ef;
+
+}
+
+
+    /* ---------------- HERO ---------------- */
+    .hero {
+      height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; color: white;
+      background: linear-gradient(135deg, #2563eb, #9333ea);
+      position: relative; overflow: hidden;
+    }
+    .hero h1 { font-size: 3rem; font-weight: 700; }
+    .hero p { font-size: 1.25rem; opacity: 0.9; }
+
+    /* Floating background circles */
+    .circle {
+      position: absolute; border-radius: 50%; opacity: 0.35;
+      animation: float 10s infinite ease-in-out;
+    }
+    .circle.one { width: 220px; height: 220px; background: #60a5fa; top: 12%; left: 12%; }
+    .circle.two { width: 320px; height: 320px; background: #a78bfa; bottom: 12%; right: 12%; animation-delay: 3s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-40px); }
+    }
+
+    /* ---------------- FEATURES ---------------- */
+    .feature-card {
+      background: rgba(189, 115, 115, 0.85);
+      backdrop-filter: blur(14px);
+      border-radius: 18px;
+      padding: 2rem;
+      transition: all 0.8s ease;
+    }
+    .feature-card:hover {
+      cursor: pointer;
+      background-color: #9333ea;
+      color: cyan;
+      box-shadow: 0 0 80px 20px;
+      transform:translateY(-20px);
+      transform:translateX(-12px);
+      animation: .8s;
+      
+    }
+
+    /* ---------------- MENTORS ---------------- */
+    .mentor-card {
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.4s;
+      background-color:black;
+    }
+    .mentor-card img {
+      transition: transform 0.6s;
+    }
+    .mentor-card:hover img {
+      transform: scale(1.1);
+      cursor: pointer;
+      color: aqua;
+      box-shadow: 0 0 80px 20px;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      background: #111827;
+      color: #9ca3af;
+    }
+    footer a {
+      color: #d1d5db;
+      text-decoration: none;
+    }
+    footer a:hover { color: white; }
+    #text1{
+      color:whitesmoke;
+    }
+    /* .container{
+      background-color: red;
+    }
+     */
+  
+     #saty1{
+      color: rgb(167, 241, 18);
+     }
+h3{
+  color: white;
+}
+#saty2{
+  background-color:chocolate;
+  border-radius: 20px;
+
+  height: 550px;
+  
+}
+
+#saty4{
+  color: whitesmoke;
+  text-decoration: underline;
+}
+#name{
+  /* background-color: #60a5fa; */
+  border-radius: 15px;
+  border: solid black 5px;
+}
+#email{
+  /* background-color: #60a5fa ; */
+    border-radius: 15px;
+  border: solid black 5px;
+}
+#msg{
+   /* background-color: #60a5fa ; */
+     border-radius: 15px;
+  border: solid black 5px; 
+}
+#name:hover{
+  cursor: pointer;
+  color: #a78bfa;
+
+  box-shadow: 0 0 80px 20px;
+}
+#email:hover{
+    cursor: pointer;
+  color: #a78bfa;
+
+  box-shadow: 0 0 80px 20px;
+}
+#msg:hover{
+    cursor: pointer;
+  color: #a78bfa;
+
+  box-shadow: 0 0 80px 20px;
+}
+#satyam{
+  border-radius: 25px;
+  border: solid rgb(158, 106, 106) 3px;
+}
+#satyam:hover{
+  cursor: pointer;
+  color: #a78bfa;
+
+  box-shadow: 0 0 80px 20px;
+}
+.nav-item{
+background-color: rgb(175, 62, 21);
+  border-radius: 25px;
+  /* border: solid red 3px; */
+
+  /* padding:5px; */
+  margin:10px;
+  /* border: solid red 3px;
+   */
+font-size: 20px;
+}
+.nav-item:hover{
+  cursor: pointer;
+  color: aqua;
+  background-color: chartreuse;
+  box-shadow: 0 0 80px 20px;
+}
+
+
+#navbar{
+  
+  color:black;
+}
+#set{
+  padding-top: 40px;
+  text-shadow: 0 0 30px 20px;
+}
+#img1{
+  height: 250px;
+
+}
+#saty3{
+background-color: black;
+}
+</style>
+</head>
+<body>
+
+<!-- ---------------- NAVBAR ---------------- -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow">
+  <div class="container">
+    <a  class="navbar-brand" href="">SkillDossier.io</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="Features.html" class="nav-link" id="navbar">Features</a></li>
+        <li class="nav-item"><a href="#mentors" class="nav-link" id="navbar">Mentors</a></li>
+        <li class="nav-item"><a href="#contact" class="btn btn-primary ms-3 "id="navbar">Get Started</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ---------------- HERO ---------------- -->
+<section class="hero">
+  <!-- Decorative Circles -->
+  <div class="circle one"></div>
+  <div class="circle two"></div>
+
+  <div class="content">
+    <h1 class="mb-3">Empowering Careers with Mentorship</h1>
+    <p class="mb-4">Guidance • Skill Development • Future Readiness</p>
+    <a  href="#mentors" class="btn btn-light btn-lg me-2"><i class="bi bi-people"  id="navbar"></i> Find a Mentor</a>
+    <a href="#features" class="btn btn-outline-light btn-lg"><i class="bi bi-lightning"></i> Explore</a>
+  </div>
+</section>
+
+<!-- ---------------- FEATURES ---------------- -->
+<section id="features" class="py-5">
+  <div class="container text-center">
+    <h2 id="text1" class="fw-bold mb-5">Why SkillDossier?</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-compass display-5 text-primary"></i>
+          <h5 class="mt-3">Guidance</h5>
+          <p>1-on-1 expert mentorship</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-code-slash display-5 text-success"></i>
+          <h5 class="mt-3">Skills</h5>
+          <p>Hands-on learning & coding</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-folder-check display-5 text-warning"></i>
+          <h5 class="mt-3">Portfolio</h5>
+          <p>Showcase real-world projects</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="feature-card">
+          <i class="bi bi-award display-5 text-danger"></i>
+          <h5 class="mt-3">Readiness</h5>
+          <p>Interview & resume prep</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- MENTORS ---------------- -->
+<section id="mentors" class="py-5 bg-light" >
+  <div id="saty2"     class="container">
+    <h2 class="fw-bold mb-5 text-center" id="set">Meet Our Mentors</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card mentor-card shadow">
+          <img id="img1" src="satyam img2.jpg" height="300px" class="card-img-top">
+          <div class="card-body">
+            <h3>Satyam Gautam</h3>
+            <p id="saty1">Software Engineer • React, JS</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mentor-card shadow">
+          <img  id="img1"    src="satyam img5.jpg" height="300px"     class="card-img-top">
+          <div class="card-body">
+            <h3>Rohit Singh</h3>
+            <p id="saty1">Product Manager • Career Growth</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mentor-card shadow">
+          <img id="img1" src="satyam img4.jpg" height="300px"   class="card-img-top">
+          <div class="card-body">
+            <h3>Gautam Adarsh</h3>
+            <p id="saty1">Data Scientist • ML, Python</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- CONTACT ---------------- -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <h2 id="saty4" class="fw-bold text-center mb-4">Get Started</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form id="saty3" onsubmit="submitForm(event)" class="card p-4 shadow-lg feature-card border-0">
+          <input id="name" class="form-control mb-3" placeholder="Your name" required>
+          <input id="email" type="email" class="form-control mb-3" placeholder="Your email" required>
+          <textarea id="msg" class="form-control mb-3" rows="3" placeholder="Your goals"></textarea>
+          <button id="satyam" class="btn btn-primary w-100">
+            <i  class="bi bi-send"></i> Request Consultation
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- FOOTER ---------------- -->
+<footer class="text-center py-4">
+  <div class="container">
+    <p class="mb-1">© 2025 SkillDossier.io</p>
+    <small>Guidance • Skills • Future Readiness</small>
+    <br>
+    <small> This is intership assignment created by satyam i created only frontend </small>  </div>
+    <div id="div2">
+                    <a href="https://www.facebook.com/share/1CLFcRoC9w/"><i class='bx bxl-facebook'></i></box-icon> </a>
+                     <a href="https://www.instagram.com/techsmartsatyam?igsh=dmpla3ZnNmNlOHV3"> <i class='bx bxl-instagram'></i></a>
+                      <a href="https://www.linkedin.com/in/tech-smart-satyam-309877286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"> <i class='bx bxl-linkedin'></i></a>
+                       <a href="7880542263"> <i class='bx bxl-whatsapp'></i></a>
+                </div>
+</footer>
+
+<!-- ---------------- SCRIPTS ---------------- -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+  // Form handler
+  function submitForm(e){
+    e.preventDefault();
+    alert("✅ Thank you! We'll reach out soon.");
+    e.target.reset();
+  }
+
+  // GSAP Animations
+  gsap.from(".hero h1", { y: 50, opacity: 0, duration: 1 });
+  gsap.from(".hero p", { y: 50, opacity: 0, duration: 1, delay: 0.3 });
+  gsap.from(".hero a", { y: 50, opacity: 0, duration: 1, delay: 0.6, stagger: 0.2 });
+
+  gsap.utils.toArray(".feature-card").forEach((card,i)=>{
+    gsap.from(card, {
+      scrollTrigger:{ trigger:card, start:"top 85%" },
+      y:50, opacity:0, duration:0.8, delay:i*0.1
+    });
+  });
+
+  gsap.utils.toArray(".mentor-card").forEach((card,i)=>{
+    gsap.from(card, {
+      scrollTrigger:{ trigger:card, start:"top 85%" },
+      scale:0.9, opacity:0, duration:0.8, delay:i*0.1
+    });
+  });
+</script>
+</body>
+</html>

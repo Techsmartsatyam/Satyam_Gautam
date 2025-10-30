@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me </title>
+  <link rel="stylesheet" href="about.css">
+   <link rel="shortcut icon" href="port.png" type="image/x-icon">
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Me</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  </header>
+
+  <section class="about reveal">
+    <img src="satyam img5.jpg" alt="Profile Picture" onclick="openLightbox(this.src)">
+    <h2 id="sat1">Satyam Gautam</h2>
+    <p>
+      I am a passionate developer and technology enthusiast. I enjoy creating modern websites,
+      working on innovative projects, and exploring new technologies. My focus is on delivering
+      user-friendly and impactful solutions through code and design.
+    </p>
+    <div class="socials">
+      <a href="https://www.instagram.com/techsmartsatyam?igsh=dmpla3ZnNmNlOHV3">🌐</a>
+      <a href="https://www.facebook.com/share/1CLFcRoC9w/">💼</a>
+      <a href="https://www.linkedin.com/in/tech-smart-satyam-309877286?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">📧</a>
+    </div>
+  </section>
+
+  <section class="about reveal">
+    <h2>My Skills</h2>
+    <p>
+      💻 Web Development | ⚡ Electronics | 🎨 UI/UX Design | 🤖 AI & Automation  
+      Always learning and building innovative things that can make life easier.
+    </p>
+  </section>
+
+  <section class="about reveal">
+    <h2>Projects</h2>
+    <p>
+      🔹 tic tac toe game
+          🔹Government Exam portal 
+              🔹Making a website for Ram Rasoi Restaurent
+
+      🔹 Automated Attendance System  
+      🔹 Portfolio & Web Applications
+      🔹And many more
+      
+    </p>
+  </section>
+
+  <!-- Lightbox for Image -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+  </div>
+
+<script src="about.js"></script>
+</body>
+</html>
+

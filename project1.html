@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects Showcase</title>
+  <link rel="shortcut icon" href="port.png" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+    :root {
+      --bg-light: linear-gradient(135deg, #f0f4ff, #e0f7fa);
+      --bg-dark: linear-gradient(135deg, #0f172a, #1e293b);
+      --card-light: rgba(255,255,255,0.8);
+      --card-dark: rgba(30,41,59,0.8);
+      --text-light: #111827;
+      --text-dark: #f9fafb;
+      --primary: #6366f1;
+      --secondary: #3b82f6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      position: relative;
+    }
+    header h1 { font-size: 3rem; font-weight: 700; }
+    header p { margin-top: .5rem; font-size: 1.2rem; opacity: 0.9; }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    body.dark .theme-toggle { background: #1e293b; color: #f9fafb; }
+    .theme-toggle:hover { transform: rotate(20deg) scale(1.1); }
+
+    .search-box {
+      margin: 2rem auto;
+      max-width: 500px;
+      display: flex;
+      justify-content: center;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px 15px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      outline: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .search-box input:focus {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(59,130,246,0.3);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .project-card {
+      background: var(--card-light);
+      border-radius: 18px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      animation: fadeInUp 0.8s ease both;
+    }
+    body.dark .project-card { background: var(--card-dark); }
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 25px 45px rgba(0,0,0,0.3);
+    }
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .project-card:hover img { transform: scale(1.15); }
+    .project-content { padding: 1.5rem; }
+    .project-content h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    .project-content p {
+      margin-top: 0.6rem;
+      font-size: 1rem;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+    .tag {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      background: #e0f2fe;
+      color: #0369a1;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+    body.dark .tag { background: #334155; color: #93c5fd; }
+
+    .buttons {
+      margin-top: 15px;
+    }
+    .buttons a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--primary);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .buttons a:hover { background: var(--secondary); }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1f2937;
+      color: #eee;
+      margin-top: 3rem;
+    }
+    footer span { color: #3b82f6; font-weight: 600; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #sat1{
+        height: 350px;
+        width: 350px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 My Projects Showcase</h1>
+    <p> Hello everyone I'm Satyam Gautam I want to show  my starting project when i starting journey in the field of Web developer
+        And i created a website for Ram Rasoi Restaurent 
+    </p>
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="🔍 Search projects...">
+  </div>
+
+  <section class="projects" id="projects">
+    <div class="project-card" data-title="Tic Tac Toe Game">
+      <img id="sat1" src="tic tac image.jpg"alt="Tic Tac Toe">
+      <div class="project-content">
+        <h3>Tic Tac Toe Game</h3>
+        <p>A fun interactive game built with HTML, CSS and JavaScript.</p>
+        <span class="tag">Game</span>
+        <div class="buttons">
+          <a href="tic tac game.html">Live Demo</a>
+       
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-title="Calculator">
+      <img  id="sat1"src="calculator image.jpg" alt="Calculator">
+      <div class="project-content">
+        <h3>Calculator</h3>
+        <p>A simple and stylish calculator app for quick calculations.</p>
+        <span class="tag">Utility</span>
+        <div class="buttons">
+          <a href="calculator.html">Live Demo</a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-title="Government Exam Portal">
+      <img id="sat1"     src="exam portal image.jpg" alt="Exam Portal">
+      <div class="project-content">
+        <h3>Government Exam Portal</h3>
+        <p>An online portal to help students prepare and register for exams.</p>
+        <span class="tag">Web App</span>
+        <div class="buttons">
+          <a href="govenmet.html">Live Demo</a>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-title="3D Image Slider">
+      <img id="sat1" src="3d image.jpg" alt="3D Slider">
+      <div class="project-content">
+        <h3>3D Image Slider</h3>
+        <p>A modern slider with 3D transition effects.</p>
+        <span class="tag">UI Component</span>
+        <div class="buttons">
+          <a href="3d image .html">Live Demo</a>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-title="Ram Rasoi Website">
+      <img src="18.jpg" alt="Ram Rasoi Website">
+      <div class="project-content">
+        <h3>Ram Rasoi Website</h3>
+        <p>A cultural and religious website sharing the story of Ram Rasoi.</p>
+        <span class="tag">Cultural</span>
+        <div class="buttons">
+          <a href="https://sites.google.com/view/ram-rasoi-restaurant/home">Live Demo</a>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-title="SkillDossier Website">
+      <img id="sat1"src="skill.image.jpg" alt="SkillDossier Website">
+      <div class="project-content">
+        <h3>SkillDossier Website</h3>
+        <p>A career growth and mentorship platform connecting learners and mentors.</p>
+        <span class="tag">EdTech</span>
+        <div class="buttons">
+          <a href="project3.html">Live Demo</a>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card" data-title="Smart Attendance System">
+      <img  id="sat1"     src="automated.jpg" alt="Smart Attendance">
+      <div class="project-content">
+        <h3>Smart Attendance System</h3>
+        <p>An automated system for managing student attendance smartly.</p>
+        <span class="tag">Automation</span>
+        <div class="buttons">
+          <a href="https://68c19d502123bd1e02af72d8--playful-concha-bf3b98.netlify.app/">Live Demo</a>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Made with  <span>❤</span> by Satyam</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    searchInput.addEventListener('keyup', function() {
+      let filter = searchInput.value.toLowerCase();
+      projectCards.forEach(card => {
+        let title = card.getAttribute('data-title').toLowerCase();
+        card.style.display = title.includes(filter) ? '' : 'none';
+      });
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+
+    if(localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark');
+      themeToggle.textContent = '☀️';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      if(body.classList.contains('dark')) {
+        themeToggle.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeToggle.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+</body>
+</html>
+

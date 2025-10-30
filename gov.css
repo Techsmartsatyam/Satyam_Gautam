@@ -1,0 +1,253 @@
+ {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color:darkslategrey;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: aqua;
+      color:black;
+      padding: 20px;
+      text-align: center;
+      border-radius: 35px;
+    }
+    header p{
+        color:red;
+        font-size: 20px;
+    }
+
+    nav {
+      background: #0059b3;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      background-color: black;
+      border-radius: 25px;
+      
+    }
+nav a {
+      color: white;
+      margin: 0 100px;
+      text-decoration: none;
+      font-weight: bold;
+      
+    }
+    .under{
+        text-decoration: underline;
+        text-align: center;
+        text-shadow: 0 0 30px;
+        color: whitesmoke;
+
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      color: rgb(160, 89, 89);
+      box-shadow: 0 0 80px 30px; 
+      border-radius: 20px;
+    
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+ .card {
+      background: rgb(155, 86, 86);
+      color:black;
+      flex: 1 1 30%;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 80px 40px #161111;
+      transform: translateY(-5px);
+
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background-color: rgb(179, 121, 47);
+      border-radius: 25px;
+    } table, th, td {
+      border: 5px solid #afa2a2;
+      padding: 10px;
+      text-align: center;
+    }
+    #hov:hover{
+        cursor: pointer;
+        background-color:whitesmoke;
+        color:black;
+        box-shadow: 0 0 80px 50px;
+        border-radius: 50%;
+        
+    }
+    #hov1:hover{
+                cursor: pointer;
+        background-color: aqua;
+        color:black;
+        box-shadow: 0 0 80px 50px;
+        border-radius: 50%;
+    }
+     #hov2:hover{         cursor: pointer;
+        background-color:rgb(184, 8, 96);
+        color:black;
+        box-shadow: 0 0 80px 50px;
+        border-radius: 50%;}
+      #hov3:hover{         cursor: pointer;
+        background-color:rgb(40, 168, 68);
+        color:black;
+        box-shadow: 0 0 80px 50px;
+        border-radius: 50%;}
+       #hov4:hover{         cursor: pointer;
+        background-color:rgb(128, 79, 79);
+        color:black;
+        box-shadow: 0 0 80px 50px;
+        border-radius: 50%;}
+        
+#sat1{
+    background-color: darkgoldenrod;
+    margin-right: 400px;
+    border-radius: 20px;
+    
+}
+#sat2{
+        background-color:darkgray;
+    margin-right: 400px;
+    border-radius: 20px;
+    justify-content: center;
+}
+#sat3{
+        background-color:darkgreen;
+    margin-right: 400px;
+    border-radius: 20px;
+    color: white;
+}
+#sat5{
+    text-align: center;
+    font-size: 20px;
+}
+#font{
+  font-size: 20px;
+}
+#sat4{
+        background-color:rgb(172, 172, 27);
+    margin-right: 400px;
+    border-radius: 20px;
+}
+
+    form {
+      margin-top: 30px;
+      background:rgb(19, 216, 19);
+      padding: 20px;
+      border-radius: 25px;
+      box-shadow: 0 0 80px 30px ;
+    }
+    label{
+      
+      
+    }
+input{
+  background-color:rgb(44, 68, 60);
+  border-radius: 30px;
+  box-shadow: 0 0 80px 10px; 
+}
+input:hover{
+  cursor: pointer;
+  color:aquamarine;
+  
+}
+button{
+  border-radius: 25PX;
+  box-shadow: 0 0 80PX 30PX ;
+  
+}
+button:hover{ 
+  box-shadow: 0 0 5px cyan,
+0 0 25px cyan, 0 0 50px cyan,
+0 0 100px cyan,0 0 200px cyan
+;
+}
+#required{
+  color:rgb(83, 18, 18) ;
+  background-color:gold;
+}
+h1{
+  color: whitesmoke;
+  text-decoration: underline;
+  text-align: center;
+}
+#photo{
+  color:black;
+  font-size: 30px;
+}
+#dacument{
+  background-color:fuchsia;
+  border-radius: 30px;
+}
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }footer {
+      text-align: center;
+      background-color: #2a333d;
+      color: white;
+      padding: 10px;
+      margin-top: 40px;
+      border-radius: 25px;
+      box-shadow: 0 0 80px 20px;
+    }
+#div2 a{
+    position:relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+
+
+}
+#div2 a:hover{
+
+    background-color: #0ef;
+    color: black;
+    box-shadow: 0 0 80px #0ef;
+
+}
+button a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  background-color: rgb(169, 204, 204);
+  border-radius: 30px;
+}

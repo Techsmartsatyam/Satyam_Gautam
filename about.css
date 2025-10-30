@@ -1,0 +1,199 @@
+  
+    /* Google Font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    :root {
+      --bg-color: #f5f7fa;
+      --text-color: #222;
+      --accent-color: #6366f1;
+      --card-bg: #fff;
+    }
+
+    body.dark {
+      --bg-color: #0f172a;
+      --text-color: #f1f1f1;
+      --card-bg: #1e293b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.5s, color 0.5s;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+      background: var(--bg-color);
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--accent-color);
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 25px;
+      background: var(--accent-color);
+      color: #fff;
+      font-weight: 600;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .toggle-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .about {
+      max-width: 1000px;
+      margin: 70px auto;
+      padding: 40px;
+      background: var(--card-bg);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Profile Image with hover effect */
+    .about img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--accent-color);
+      margin-bottom: 25px;
+      cursor: pointer;
+      transition: transform 0.4s, box-shadow 0.4s;
+    }
+
+    .about img:hover {
+      transform: scale(1.15) rotate(3deg);
+      box-shadow: 0 0 25px var(--accent-color);
+    }
+
+    .about h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+      animation: slideUp 1s ease;
+    }
+
+    .about p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      animation: slideUp 1.3s ease;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      animation: fadeIn 2s ease;
+    }
+
+    .socials a {
+      font-size: 24px;
+      color: var(--accent-color);
+      text-decoration: none;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .socials a:hover {
+      transform: scale(1.3) rotate(-5deg);
+      color: #4338ca;
+    }
+
+    /* Lightbox (Full Image View) */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 20px;
+      box-shadow: 0 0 40px var(--accent-color);
+      animation: zoomIn 0.6s ease;
+    }
+
+    .lightbox:active {
+      display: none;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideUp {
+      from {opacity: 0; transform: translateY(50px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Scroll reveal effect */
+    .reveal {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .about {
+        margin: 40px 20px;
+        padding: 25px;
+      }
+    }
+    #sat1{
+        color:yellow;
+        background-color: rgba(0,0,0,0.9);;
+        border-radius: 40px;
+        
+        
+    }
+    .about {
+        box-shadow: 0 0 80px 30px ;
+        /* color: black; */
+    
+    }
