@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Services Portal</title>
+   <link rel="shortcut icon" href="port.png" type="image/x-icon">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+    :root {
+      --bg-color: #f5f7fa;
+      --text-color: #222;
+      --accent-color: #6366f1;
+      --card-bg: #fff;
+    }
+
+    body.dark {
+      --bg-color: #0f172a;
+      --text-color: #f1f1f1;
+      --card-bg: #1e293b;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.5s, color 0.5s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      position: sticky;
+      top: 0;
+      background: var(--bg-color);
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--accent-color);
+    }
+
+    .toggle-btn {
+      cursor: pointer;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 25px;
+      background: var(--accent-color);
+      color: #fff;
+      font-weight: 600;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    .toggle-btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #6366f1, #4338ca);
+      color: #fff;
+      border-radius: 0 0 50px 50px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    /* Services Section */
+    section {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      color: var(--accent-color);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 0 80px 20px;
+      color: aqua;
+    }
+
+    .card.active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.7s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      section {
+        padding: 10px;
+      }
+      .hero h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Services</h1>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Dark Mode</button>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Welcome to My Service Portal</h2>
+    <H3> If you wants to any service plz content me 
+    </H3>
+    <!-- <br> -->
+    <h4> My content number: 7880542263</h4>
+    <p>Delivering quality solutions in Technology, Teaching, and Innovation 🚀</p>
+  </div>
+
+  <!-- Services Section -->
+  <section>
+    <h2>What I Offer</h2>
+    <div class="services">
+      <div class="card reveal">
+        <h3>💻 Web Development</h3>
+        <p>
+          I create modern, responsive, and professional websites using the latest technologies like HTML, CSS, JavaScript, and React.
+        and use many more coding language 
+        </p>
+      </div>
+      <div class="card reveal">
+        <h3>⚡ Electronics Projects</h3>
+        <p>
+          From IoT devices to smart electronics projects, I design and build solutions that help in real life.
+        </p>
+      </div>
+      <div class="card reveal">
+        <h3>📚 Teaching & Mentorship</h3>
+        <p>
+          With experience in guiding students, I provide teaching support in Science, coding, and engineering fundamentals to help learners succeed.
+        </p>
+      </div>
+      <div class="card reveal">
+        <h3>🎨 UI/UX Design</h3>
+        <p>
+          Designing intuitive and user-friendly interfaces with a focus on simplicity and elegance.
+        </p>
+      </div>
+      <div class="card reveal">
+        <h3>🤖 Automation</h3>
+        <p>
+          Building smart automation systems and AI-powered applications for efficiency and innovation.
+        </p>
+        
+      </div>
+    <div  class="card reveal"   >
+        <h3>💻  DSA</h3>
+        We help to solving problem besed on the Dsa 
+        and many more  
+    </div>
+    <div   class="card reveal" >
+     <h3>🎬 Video Making & Editing</h3>
+        <p>
+          Offering professional video creation and editing services for tutorials, presentations, promotions, and social media content with creative effects.
+        </p>
+      
+    </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle("dark");
+    }
+
+    // Scroll reveal for cards
+    window.addEventListener("scroll", function() {
+      const cards = document.querySelectorAll(".card");
+      for (let i = 0; i < cards.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = cards[i].getBoundingClientRect().top;
+        let elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          cards[i].classList.add("active");
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
